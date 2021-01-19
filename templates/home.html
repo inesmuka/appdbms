@@ -1,1 +1,14 @@
+{% extends 'layout.html' %}
 
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Home Page</h2>
+<p>Welcome back, {{ username }}!</p>
+<form action="{{ url_for('home') }}" method="post" autocomplete="off">
+  <label for="ingredient">First name:</label>
+  <input type="text" id="ingredient" name="ingredient"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<div class="msg">{{ msg }}</div>
+{% endblock %}
